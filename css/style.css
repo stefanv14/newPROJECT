@@ -1,0 +1,797 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin:0;
+	padding:0;
+	background:FFF;
+	font-size:14px;
+	font-family: 'Poiret One', cursive;
+	color:#363636;
+	font-weight:300;
+}
+.wrapper {
+	width: 1200px;
+	margin:0px auto;
+}
+
+h1 { font-size:3em;}
+h2 { font-size:2.2em;}
+h3 { font-size:2em;}
+h4 { font-size:1.6em;}
+h5 { font-size:1.4em;}
+h6 { font-size:1.2em;}
+
+p {margin:0.3em 0 0.5em;}
+
+img {vertical-align:bottom;max-width:100%;}
+
+.bold {font-weight:700;}
+
+a:link,
+a:visited {text-decoration:none;color:yellow;transition:0.2s all ease;}
+a:hover {text-decoration:none;color:#f39200;}
+a:active {color:#696969;}
+
+#header {              /*--------------------------HEADER-----------------------------*/
+	background:#FFF;
+}
+#logo {			
+	float:left;
+}
+#logo img {			/*--------LOGO---------*/
+	height:150px;
+	padding:5px 0 25px;
+	position: absolute;
+	top:0%;
+	left:38%;
+}
+#navigacija {		/*------NAVIGACIJA------*/
+	float:right;
+}
+#navigacija ul {
+	list-style:none;
+	margin:7px;
+	padding:0;
+}
+#navigacija ul li {
+	float:left;
+}
+#navigacija ul li a {
+    position: relative;
+	display: inline-block;
+	margin: 55px 25px;
+	outline: none;
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.85em;
+}
+#navigacija ul li a:hover,
+#navigacija ul li a:focus {
+	outline: none;
+	color:black;
+	font-weight: 700;
+}
+#navigacija .cl-effect-12 a::before,
+#navigacija .cl-effect-12 a::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	border: 2px solid rgba(254,160,38,0.4);
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+#navigacija .cl-effect-12 a::after {
+	width: 60px;
+	height: 60px;
+	border-width: 6px;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+#navigacija .cl-effect-12 a:hover::before,
+#navigacija .cl-effect-12 a:hover::after,
+#navigacija .cl-effect-12 a:focus::before,
+#navigacija .cl-effect-12 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}
+.dugme {
+	position:absolute;
+	bottom: 5%;
+	left:50%;
+}
+.dugme a {
+	padding: 15px 18px;
+	border: 2px solid orange;
+	border-radius: 7px;
+	color:orange;
+	font-weight:1000;
+}
+.dugme a:hover {
+	background: orange;
+	color:white;
+}
+.button {
+	border:1px solid #FFFFFF;
+	border-radius: 20px;
+	padding: 10px;
+}
+.button:hover {
+	background-color:#3d6315;
+	color:#000000;
+}
+#respmenu {
+	display:none;
+	font-size:1.2em;
+	margin-top:40px;
+	height: 50px;
+}				/*---------KRAJ NAVIGACIJE ----------*/
+
+	/*---------------------------------------KRAJ HEADERA----------------------------------*/
+
+
+#hero {		/*------------------------------------HERO-------------------------------------*/
+	background:url(../images/background.jpg) top left / contain fixed;
+	background-repeat: no-repeat;
+	padding:180px 0;
+	text-align:center;
+	height: 100vh;
+}
+#hero h1 {
+    color:#fea026;
+    font-size: 60px;
+    text-align: right;
+}
+#hero p {
+	width: 50%;
+	float:right;
+	color:#000000;
+	font-size:20px;
+	font-weight: 700;
+}
+#downd {
+	position:absolute;
+	bottom: 5%;
+	left:50%;
+}
+#downd a {
+	padding: 15px 18px;
+	border: 2px solid #fea026;
+	border-radius: 7px;
+	color:#fea026;
+	font-weight:1000;
+}
+#hero a {
+	padding:20px;
+}			/*-----------------------------KRAJ HERO ------------------------------------*/
+
+
+#about {		/*--------------------------------ABOUT-------------------------------------*/
+	background:url(../images/about.jpg) bottom right / contain fixed;
+	background-repeat: no-repeat;
+	height:100vh;
+	position: relative;
+}
+.tekst {
+	color:#000000;
+	font-size: 20px;
+	font-weight: 700;
+	border:1px solid black;
+	border-radius: 5px;
+	float:left;
+	width: 30%;
+	text-align: justify;
+	padding: 15px 25px 45px 25px;
+	position: absolute;
+	top:5%;
+	left:15%;
+	line-height:30px;
+	background-color:white;
+	z-index:2;
+}
+#about h2 {
+	font-size:150px;
+	color: #fea026;
+	margin-top: 0px;
+	white-space:no-wrap;
+	line-height:60px;
+	letter-spacing:8px;
+}
+.tekst2 {
+	width:45%;
+	height:20%;
+	position:absolute;
+	top:87%;
+	left:65%;
+	background-color:white;
+	border:1px solid black;
+	border-right: 0;
+	border-radius: 5px;
+	z-index:3;
+	white-space:no-wrap;
+	padding-left:10px;
+	padding-bottom:35px;
+}
+.tekst2 span {
+	color:#C77E00;
+	margin-left:10px;
+}				/*-------------------------KRAJ ABOUT---------------------------------*/
+
+
+#products {		/*----------------------------PRODUCTS-----------------------------------*/
+	background:#FFF;
+	height: 100vh;
+	text-align:center;
+	padding-top: 20px;
+}
+#products .product {
+	width:190px;
+	height: 345px;
+	padding:35px 35px 15px;
+	border-radius: 20px;
+	margin-top:10px;
+	margin-left:33px;
+	background:#FFF;
+	float:left;
+	text-align:center;
+	position:relative;
+	top:0;
+    transition: all 0.2s ease;
+}
+#products span {
+	position:absolute;
+	left:44%;
+	top:-50px;
+	width:60px;
+	height:60px;
+	background:#FFF;
+	margin-left:-30px;
+	font-size:30px;
+	border: 3px solid black;
+	border-radius:50px;
+	padding: 15px;
+    transition: all 0.2s ease;
+}
+#products .product p {
+	color:#000000;
+	margin-bottom: 25px;
+	font-size: 16px;
+	text-align: justify;
+}
+#products .product h2 {
+	color: #FFFFFF;
+}
+#products  h3 {
+	color:#fea026;
+	font-size: 50px;
+	margin-top: 0;
+}
+#products  p {
+	color:#000000;
+	font-weight: 700;
+	margin-bottom: 50px;
+	width: 100%;
+}
+#products .product a {
+	color:white;
+}
+#products .product:nth-of-type(4) {
+	background:#fea026;
+	background-repeat: no-repeat;
+
+}
+#products .product:nth-of-type(3) {
+	background:#fea026;
+	background-repeat: no-repeat;
+}
+#products .product:nth-of-type(2) {
+	background:#fea026;
+	background-repeat: no-repeat;
+}
+#products .product:nth-of-type(1) {
+	background:#fea026;
+	background-repeat: no-repeat;
+}
+#products .product:hover {
+	top:-10px;
+} 					/*-----------------------KRAJ PRODUCTS----------------------------------*/
+
+
+#gallery {		/*---------------------------GALLERY---------------------------------------*/
+	width: 100%;
+	height: 100vh;
+	background:#fea026;
+}
+#gallery h4 {
+	text-align: center;
+	margin-top: 0px;
+	padding-top:40px;
+	color: black;
+	font-size: 45px;
+}
+#gallery p {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 50px;
+}
+.row > .column {
+  padding: 0 8px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 20%;
+  margin-top: 50px;
+  margin-left: 44px;
+}
+.column img {border:1px solid black;border-radius: 5px;}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 0;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:2px solid #fea026;
+}			/*---------------------------KRAJ GALLERY-----------------------------------------*/
+
+
+#contact {		/*-------------------------------CONTACT---------------------------------*/
+	background:#FFFFFF;
+	height:100vh;
+	text-align: center;
+	line-height: 50px;
+}
+#contact p {
+	font-size: 30px;
+	border-bottom: 1px solid #fea026;
+}
+#contact p:nth-of-type(4) {
+	border-bottom: none;
+}
+#contact i {
+	margin-right:20px;
+	font-size: 30px;
+	color: #fea026;
+}
+#contact h5 {
+	font-size:40px;
+	border-bottom: 6px solid #fea026;
+}
+#map {
+	width:100%;
+	height:150px;
+}
+#footer {		/*---------------------------------FOOTER------------------------------------*/
+    height: auto;
+	display:  block;
+    background-color: black;
+	color: #FFF;
+	text-align: center;
+}
+#footer p {
+	font-size: 1.2em;
+}				/*------------------------------KRAJ FOOTER----------------------------------*/
+
+/*--------------------------KRAJ CONTACT---------------------------------------*/
+
+
+
+
+#myBtn {  /*------BACK TOP-----------------*/
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+#myBtn:hover {
+   	background-color: #555; /* Add a dark-grey background on hover */
+}
+@media screen and (min-width:1024px) and (max-width:1260px) { /*----------Media UPITI---------*/
+    .wrapper {
+		width:960px;
+        margin: 0 auto;
+	}
+	#logo img {
+        left: 25%;
+    }
+	#navigacija {
+        float: left;
+        margin-left: 30%;
+        font-size: 12px;
+    }
+    #hero {height: 100vh;
+    }
+    
+    #hero h1 {
+        margin-right: 9%;
+        font-size: 45px;
+    }
+    #hero p {
+        margin-right: 7%;
+        width: 400px;
+        line-height: 35px;
+    }
+    #about {
+		height: 100vh;
+	}
+    #products p:nth-of-type(1) {width: 80%;margin:0 auto;}
+    #products {
+		height: auto;
+	}
+    #products .product {
+		width:220px;
+		margin: 50px 60px 30px 110px;
+	}
+	#products .product:nth-of-type(4n) {
+		margin-right:60px;
+	}
+	#products .product:nth-of-type(2n) {
+		margin-right:0;
+	}
+    #gallery {
+		height: auto;
+		clear: both;
+	}
+    #gallery img {
+        width: 300px;
+        margin-right:60px;
+        margin-left: 80px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+	}
+    #gallery img:nth-of-type(4n) {
+		margin-right:60px;
+	}
+	#gallery img:nth-of-type(2n) {
+		margin-right:0;
+	}
+    #footer {
+		clear: both;
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .wrapper{
+		width: 700px;
+	}
+	#logo {
+       float: left;
+    }
+    #logo img {
+        left:55%;
+        top:6%;
+    }
+	#navigacija {
+		font-size: 10px;
+		float: left;
+	}
+    #navigacija ul {
+        margin-left: 0%;
+    }
+	#navigacija ul li a {
+		margin-left: 50px;
+		margin-top: 20px;
+	}
+	#hero {
+		height: 100vh;
+	}
+	#hero h1 {
+        float: right;
+        margin-left: 5%;
+        font-size: 2.5em;
+        margin-right: 0.5em;
+        margin-top: 30px;
+    }
+    #hero p {
+        float: right;
+        margin-right: 3%;
+        height: auto;
+        width: 250px;
+        line-height: 50px;
+    }
+	#about {
+		height: 100vh;
+	}
+	#about .tekst2 {
+		display:none;
+	}
+	#about .tekst {
+		font-size:16px;
+	}
+    #products  {
+        display: block;
+		height: auto;
+		width: 100%;
+	}
+    #products .product {
+		width:200px;
+		margin: 50px 10px 30px 50px;
+	}
+	#products .product:nth-of-type(4n) {
+		margin-right:40px;
+	}
+	#products .product:nth-of-type(2n) {
+		margin-right:0;
+	}
+    #gallery {
+		height: auto;
+		clear: both;
+	}
+    #gallery img {
+        width: 300px;
+        margin-right:60px;
+        margin-left: 23px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+	}
+    #gallery img:nth-of-type(4n) {
+		margin-right:60px;
+	}
+	#gallery img:nth-of-type(2n) {
+		margin-right:0;
+	}
+	#footer {clear:both;}
+ }
+
+@media screen and (max-width:767px) {
+	.wrapper{
+		width: 90%;
+	}
+	#logo {
+		float:none;
+		text-align:center;
+		padding-top: 10%;
+	}
+	#respmenu {
+		display:block;
+		margin-top: 50%;
+		background: #fea026;
+		color: #FFF;
+		font-size: 40px;
+		text-align: center;
+		border:2px solid #000;
+	}
+	#navigacija {
+		float:none;
+		color: black;
+	}
+	#navigacija ul {
+		display:none;
+		padding-top: 20%;
+		text-align: center;
+		z-index:1;
+	}
+    #navigacija ul li {
+		float:none;
+		border-bottom:1px solid #ccc;
+	}
+	#header {background: #fea026;}
+	#hero {
+		height:auto;
+		clear: both;
+		background:url(/images/hero-back.jpg);
+		background-size: cover;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+	}
+    #hero h1 {
+        text-align: center;
+        float: none;
+        margin:-130px auto;
+        font-size: 2.0em;
+        width: 100px;
+        color: #FFF;
+    }
+    #hero p {
+        float: none;
+        color: #000;
+        width: 90%;
+        margin-top: 50%;
+        margin:200px auto 0px auto;
+		height: auto;
+    }
+	#heroTekst {
+        width: 100%;
+        line-height: auto;
+    }
+	#about {
+	    background:url(/images/bg1.png) center;
+		background-size: contain;
+		background-position: bottom bottom;
+		background-repeat: no-repeat;
+	}
+    #about .tekst {
+		font-size: 14px;
+		width: 50%;
+		line-height:90%;
+		background:rgba(255,255,255, 0.6);
+	}
+    #about .tekst2 h2 {
+		font-size: 40px;
+		margin-top:-13%;
+	}
+    #about .tekst2 {
+		bottom:40%;
+		left:25%;
+		background:none;
+		border:none;
+		
+	}
+	#products  {
+		height: auto;
+		width: 100%;
+	}
+    #products .product {
+		width:auto;
+        height: auto;
+		margin-right:0;
+        margin-bottom: 10%;
+		margin: 40px auto;
+	}
+	#products .product:nth-of-type(4n) {
+		margin-right:0;
+	}
+    #products .product p {
+        font-size: auto;
+    }
+    #gallery{
+		clear: both;
+		height: auto;
+        text-align: center;
+	}
+    #gallery img {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .column {
+		float:none;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.column img{
+		width: 90%;
+	}
+	#downd {
+		bottom: 0;
+		left: 35%;
+		display: none;
+	}
+	#contact {
+		height:100vh;
+	}
+    #contact p {
+		font-size: 25px;
+	}
+	#footer p {font-size:1em;}
+	html, body  {overflow-x:hidden;margin:0px;padding:0px;width:100%;height:100;}	
+}

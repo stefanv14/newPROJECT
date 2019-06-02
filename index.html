@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+	
+<head>  <!------------------------------HEAD-------------------------------------------------------------->
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="theme-color" content="#fea026">	<!---------Theme color-------->
+		<meta name="description" content="smoothie fruit shop">
+		<meta name="keywords" content="smoothie, shop, smoothies">
+		<meta name="author" content="Stefan Vasilijević">
+		<meta name="copyright" content="Copyright © 2018 Stefan Vasilijević, All Rights Reserved">
+	
+			<title>Smoothie Shop</title>	<!-----------NASLOV sajta------------->
+
+		<link rel="icon" href="images/fav.png">		<!----FAV icon----->
+		<link rel="stylesheet" type="text/css" href="css/style.css">	<!--Eksterni CSS--->
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	 <!--Fontawesome ikone-->
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.css">	<!----FONT----->
+		<link rel = "canonical" href = "https://www.smooth.iz.rs/index.html" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="js/jquery.aniview.js"></script>
+		
+		<script>
+		  $(function() {
+			$('a[href*="#"]:not([href="#"])').click(function() {
+			  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+				  $('html, body').animate({
+					scrollTop: target.offset().top
+				  }, 1000);
+				  return false;
+				}
+			  }
+			});
+		  });
+		</script>
+
+		<script>
+		$(document).ready(function() {
+
+			var respmenu 		= $('#respmenu');
+			var	menu 			= $('#navigacija>ul');
+
+			$(respmenu).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+				var sirina = $(window).width();
+				if(sirina > 768 && menu.is(':hidden')) {
+					menu.removeAttr('style');
+				}	
+			});
+
+		});	
+		</script>
+
+		<script>
+				// Open the Modal
+				function openModal() {
+				  document.getElementById('myModal').style.display = "block";
+				}
+
+				// Close the Modal
+				function closeModal() {
+				  document.getElementById('myModal').style.display = "none";
+				}
+
+				var slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("demo");
+				  var captionText = document.getElementById("caption");
+				  if (n > slides.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " active";
+				  captionText.innerHTML = dots[slideIndex-1].alt;
+				}
+		</script>
+
+		<script>
+				$(document).ready(function(){
+					$('.aniview').AniView();
+				});
+		</script>
+	
+</head> <!--------------------------kraj HEAD-a----------------------------------------------------------->
+
+<body>	<!------------BODY-------------------------------------------------------------------------------->
+
+	 <header id="header">  <!-------------- HEADER ------------------------------>
+    	
+		 	<div class="wrapper">
+            
+            	<div id="logo"> <!------ LOGO ------>
+					
+					<a href="index.html">
+						
+                    	<img class="aniview slow" data-av-animation="slideInLeft" src="images/logo.svg" alt="logo"> <!--LOGO Slika-->
+                    
+					</a>
+					
+                </div>  <!----- kraj LOGO ----------->
+                
+                <nav id="navigacija">	<!------NAVIGACIJA ------>
+					
+                	<ul class="aniview slow" data-av-animation="fadeInUp">
+						<div class="cl-effect-12">
+							
+                    		<li><a href="#about">About us</a></li>
+                    		<li><a href="#products">Products</a></li>
+                    		<li><a href="#gallery">Gallery</a></li>
+                    		<li><a href="#contact">Contact</a></li>
+							
+						</div>
+                    </ul>
+					
+                    <a href="#" id="respmenu" class="button"><i class="fa fa-lg fa-navicon"></i>MENU</a>
+					
+                </nav>  <!------ kraj NAVIGACIJE ----------------->
+            
+             </div>
+    
+	</header>        <!---------------- kraj HEADERA ---------------------------->
+	
+	<article id="hero">  <!------- HERO ----------------------------------------->
+		
+    	<div class="wrapper">
+			
+            <div id="heroTekst">
+				
+        		<h1 class="aniview slow" data-av-animation="slideInRight">WE ARE SMOOTHIE SHOP</h1> <!---------------------------------NASLOV-------------------->
+            	<p class="aniview slow" data-av-animation="slideInLeft">We really do love what we do, and we have worked hard to find a team that is just as passionate about customer service as we are. No matter how busy we are, we engage with our customers, making sure they have a great experience each and every time they come to our store.</p> <!----Tekst HERO------>
+				<br>
+				
+            	<div id="downd">  <!----Dugme za Home slide down------->
+				
+           	 		<a href="#about">V</a> <!--Dugme HERO slide down-->
+				
+        		</div> <!------Kraj downd button-a--------->
+            </div>  <!--------- kraj heroTekst------------->
+        </div>  <!-----------kraj hero wrappera------------>  
+    </article>  <!---------kraj HERO --------------------------------------------->
+	
+	<section id="about">   <!--------------------------------- ABOUT ----------------->
+		  <div class="wrapper">
+				<div class="tekst"> <!--ABOUT tekst-->
+
+                	<p class="aniview slow" data-av-animation="slideInLeft">Our Smoothies are world famous for their taste and they provide great nutritional benefits!</p>
+                	<p class="aniview slow" data-av-animation="slideInRight"> We use only the most absorbable protein and our real fruit smoothies are packed with antioxidants! Our premium yogurt is loaded with probiotics that is RBST free!<br>
+					Perfect for post-workout, meal replacement, weight loss, or building muscle; just ask our nutrition specialist what smoothie best aligns with your fitness and health goals!<br>
+					Why wait on shipping?<br>
+			
+					</p>
+					
+					<div class="tekst2">
+						
+						<h2 class="aniview slow" data-av-animation="slideInRight">abo<span>ut</span></h2>
+						
+					</div>
+				</div> <!---kraj ABOUT tekst--->
+            </div>
+	</section>	<!------------------------------- kraj ABOUT ------------------------->
+	
+	<section id="products"> <!---------------------------- PRODUCTS -------------->
+    	
+		<div class="wrapper"> <!--- products wrapper--->
+        	
+            <header>
+				<h3 class="aniview slow" data-av-animation="slideInLeft">GREAT PRODUCTS</h3>
+                <p class="aniview slow" data-av-animation="slideInRight">Smoothies are a great way to pack fiber- and vitamin-rich fruits and vegetables, protein, and good fats into a drinkable meal or snack. They're really easy, fast, and cheap to make at home, and you can create lots of flavor combinations using what you have. Store-bought smoothies can contain more added sugar than you may want, so making your smoothies at home lets you control how sweet they are too.
+
+With a the simple smoothie formula and tips below, you can make a healthy smoothie at home no matter which combination of ingredients you use.</p>
+            </header>
+            
+            <article class="product aniview slow" data-av-animation="flipInY"> <!--Proizvod 1---->
+				
+            	<span>
+                	<img src="images/banana.svg" alt="www.flaticon.com">
+                </span>
+				
+                <h2>Peanut Butter Banana Smoothie</h2>
+                	<p>It is so refreshing and it's sweet and tasty</p>
+						<p>"2" bananas, broken into chunks "2" cups milk "1/2" cup peanut butter "2" tablespoons honey, or to taste "2" cups ice cubes</p>
+				
+            </article>			<!----kraj proizvod 1----->
+        
+            <article class="product aniview slow" data-av-animation="flipInY">  <!---Proizvod 2------>
+				
+            	<span>
+                	<img src="images/avocado.svg" alt="www.flaticon.com">
+                </span>
+				
+                <h2>Healthy Breakfast Smoothie</h2>
+				
+            			<p>"1/2" cup spinach, or more to taste1 frozen banana, cut into chunks "1/2" small avocado, peeled and pitted "1/4" cup almond milk "1/2" teaspoon vanilla extract "1/4" teaspoon ground cinnamon</p>
+				
+            </article>			<!----kraj proizvod 2----->
+            
+            <article class="product aniview slow" data-av-animation="flipInY"> <!-----Proizvod 3------->
+				
+            	<span>
+                	<img src="images/strawberry.svg" alt="www.flaticon.com">
+                </span>
+				
+                	<h2>Banana Strawberry</h2>
+                		
+            				<p>"1" cup almond milk1 chopped banana, frozen "3/4" cup strawberries "3" ice cubes "1" scoop vanilla protein powder "1" teaspoon vanilla extract "1" teaspoon honey "1" teaspoon ground flax seed "1" teaspoon ground chia seeds "1/2" teaspoon ground cinnamon</p>
+				
+            </article>		<!----------kraj proizvod 3------------>
+            
+            <article class="product aniview slow" data-av-animation="flipInY">  <!----Proizvod 4------->
+				
+            	<span>
+                	<img src="images/carrot.svg" alt="www.flaticon.com">
+                </span>
+				
+                	<h2>Carrot Cake Smoothie</h2>
+                		<p>"1" large carrot, peeled and diced "1/4" cup frozen mango chunks "1" large fresh peach, chopped "1/4" cup soy milk "1" tablespoon ground cinnamon "1" teaspoon ground allspice "1" teaspoon ground ginger</p>
+				
+            </article>		<!---------kraj Proizvod 4----------->
+
+		</div>		<!---kraj products wrapper--->
+    </section>	<!------------------------------- kraj PRODUCTS ------------------>
+	
+	<section id="gallery">	<!------------------------ GALLERY ----------------------->
+			
+			<!-- Images used to open the lightbox -->
+			<div class="wrapper">
+				
+				<h4 class="aniview slow" data-av-animation="slideInLeft">GALLERY</h4>
+				<p class="aniview slow" data-av-animation="slideInRight">Click on image to see full</p>
+				
+			<div class="row">
+				
+			  <div class="column">
+				  
+				<img class="aniview slow hover-shadow" data-av-animation="flipInX" src="images/img1.jpg" alt="https://www.allrecipes.com" onclick="openModal();currentSlide(1)">
+				  
+			  </div>
+				
+			  <div class="column">
+				  
+				<img class="aniview slow hover-shadow" data-av-animation="flipInX"  src="images/img2.jpg" alt="https://www.allrecipes.com" onclick="openModal();currentSlide(2)">
+				  
+			  </div>
+				
+			  <div class="column">
+				  
+				<img class="aniview slow hover-shadow" data-av-animation="flipInX"  src="images/img3.jpg" alt="https://www.allrecipes.com" onclick="openModal();currentSlide(3)">
+				  
+			  </div>
+				
+			  <div class="column">
+				  
+				<img class="aniview slow hover-shadow" data-av-animation="flipInX"  src="images/img4.jpg" alt="https://www.allrecipes.com" onclick="openModal();currentSlide(4)">
+				  
+			  </div>
+				
+			</div>
+				
+
+			<!-- The Modal/Lightbox -->
+			<div id="myModal" class="modal">
+				
+			  <span class="close cursor" onclick="closeModal()">&times;</span>
+				
+			  <div class="modal-content">
+
+				<div class="mySlides">
+					
+				  <div class="numbertext">1 / 4</div>
+					
+				  <img src="images/img1full.jpg" alt="1" style="width:100%">
+					
+				</div>
+
+				<div class="mySlides">
+					
+				  <div class="numbertext">2 / 4</div>
+					
+				  <img src="images/img2full.jpg" alt="2" style="width:100%">
+					
+				</div>
+
+				<div class="mySlides">
+					
+				  <div class="numbertext">3 / 4</div>
+					
+				  <img src="images/img3full.jpg" alt="3" style="width:100%">
+					
+				</div>
+
+				<div class="mySlides">
+					
+				  <div class="numbertext">4 / 4</div>
+					
+				  <img src="images/img4full.jpg" alt="4" style="width:100%">
+					
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class="caption-container">
+					
+				  <p id="caption"></p>
+					
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					
+				  <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="1">
+					
+				</div>
+
+				<div class="column">
+					
+				  <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="2">
+					
+				</div>
+
+				<div class="column">
+					
+				  <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="3">
+					
+				</div>
+
+				<div class="column">
+					
+				  <img class="demo" src="img4.jpg" onclick="currentSlid(4)" alt="4">
+					
+				</div>
+			  </div>
+			</div>
+			
+		  </div>
+	</section>	<!---------------------------- kraj GALERRY -------------------------->
+	
+		<section id="contact">		<!----------------- CONTACT ---------------------->
+			
+			<iframe class="aniview slow" data-av-animation="fadeInUp" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90567.44941425764!2d20.35255840471964!3d44.816821877566696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade%2C+Serbia!5e0!3m2!1sen!2sus!4v1540925052137" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+			<h5 class="aniview slow" data-av-animation="slideInLeft">Contact support</h5>
+					<p class="aniview slow" data-av-animation="slideInRight"><i class="fa fa-2x fa-phone"></i> 011/000.00.00</p>
+                    <p class="aniview slow" data-av-animation="slideInRight"><i class="fa fa-2x fa-envelope"></i>info@smooth.iz.rs</p>
+                    <p class="aniview slow" data-av-animation="slideInRight"><i class="fa fa-2x fa-globe"></i>www.smooth.iz.rs</p>
+                    <p class="aniview slow" data-av-animation="slideInRight"><i class="fa fa-2x fa-home"></i>Serbia</p>
+			<footer id="footer">	<!---------------------- FOOTER ------------------------->
+		  
+				<p class="aniview slow" data-av-animation="slideInLeft">Copyright &copy; Stefan Vasilijević</p>
+        
+	</footer>	<!-------------------------------- end FOOTER ----------------------->
+		
+		</section>	<!--------------------------- kraj CONTACT ---------------------->
+	
+	
+	
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i><br>TOP</button>	<!------BACK TOP dugme------->
+		
+		<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+						document.getElementById("myBtn").style.display = "block";
+					} else {
+						document.getElementById("myBtn").style.display = "none";
+					}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+					document.body.scrollTop = 0; // For Safari
+					document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+				}
+		</script>
+	
+</body>		<!-----------------------kraj BODY------------------------------------------------------------>
+	
+</html>
